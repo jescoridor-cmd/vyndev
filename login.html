@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Login member VYN DEVELOPER."><title>Member Login — VYN DEVELOPER</title><link rel="stylesheet" href="styles.css"></head>
+<body><main class="auth-wrap"><section class="auth-card"><a class="brand gradient" href="index.html">VYN DEVELOPER</a><h1>Selamat datang kembali.</h1><p class="muted">Masuk untuk mengakses koleksi download member.</p><form id="loginForm"><div class="field"><label for="email">Email</label><input id="email" type="email" autocomplete="email" required></div><div class="field"><label for="password">Password</label><input id="password" type="password" autocomplete="current-password" required></div><p id="message" class="message" role="status"></p><button class="btn btn-primary" style="width:100%" type="submit">Login</button></form><p class="muted">Belum punya akun? <a class="gradient" href="register.html">Daftar sekarang</a></p><a class="muted" href="index.html">← Kembali ke website</a></section></main>
+<script type="module">
+import {auth} from "./firebase-config.js";
+import {signInWithEmailAndPassword,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+const form=document.querySelector("#loginForm"),msg=document.querySelector("#message");
+onAuthStateChanged(auth,user=>{if(user)location.replace("member-area.html")});
+form.addEventListener("submit",async e=>{e.preventDefault();msg.textContent="Memproses login...";msg.className="message";try{await signInWithEmailAndPassword(auth,form.email.value.trim(),form.password.value);location.href="member-area.html"}catch(err){const map={"auth/invalid-credential":"Email atau password salah.","auth/user-not-found":"Akun tidak ditemukan.","auth/wrong-password":"Password salah.","auth/invalid-email":"Format email tidak valid.","auth/too-many-requests":"Terlalu banyak percobaan. Coba lagi nanti."};msg.textContent=map[err.code]||"Login gagal. Periksa koneksi dan konfigurasi Firebase."}});
+</script></body></html>
