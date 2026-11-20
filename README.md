@@ -1,37 +1,26 @@
-# Vyn~ Developer Portfolio
+# Vyn~chatAI Texh — Version 1.0.0
 
-A static multi-page portfolio website for GitHub Pages.
+Offline-first static companion website prototype. Open `index.html` in a modern browser or deploy the folder to GitHub Pages.
 
 
-## Pages
-- `index.html` — homepage, profile, projects overview, services
-- `projects.html` — project portfolio
-- `skills.html` — skills and workflow
-- `contact.html` — Discord, email, contact form (mailto)
+## Included
+- Main menu with Chapter, Chat AI, and Guess the Image (coming soon)
+- 22 chapter outline with reader view and progress persistence
+- Profile setup (nickname, avatar, short bio)
+- Furina avatar upload and background upload
+- Offline demo chat with character-flavored responses (not a live LLM)
+- Local chat history, settings, and relationship bond counter
+- LocalStorage persistence
 
-## Features
-- Responsive mobile/tablet/desktop
-- Dark theme + light theme toggle
-- Loading screen
-- Scroll reveal
-- Local WIB clock on homepage
-- Language toggle (basic content translation)
-- Music toggle UI (placeholder, no audio file wired)
-- CSS avatar illustration
-- Contact form opens default email app
-- No backend or personal data storage
+
+## Important
+This release uses a local scripted demo chat. For real AI responses, add a secure backend/API integration. Never commit private API keys to GitHub Pages.
 
 ## Deploy to GitHub Pages
-1. Create a GitHub repository, e.g. `vyn-portfolio`.
-2. Upload all files/folders in this project to the repository root.
-3. Open **Settings → Pages**.
-4. Under Build and deployment, choose **Deploy from a branch**.
-5. Select branch `main` and folder `/ (root)`, then Save.
-6. Wait for GitHub Pages to publish and open the generated URL.
+1. Create a repository and upload the contents of this folder.
+2. In Settings → Pages, choose Deploy from branch, select `main` and `/root`.
+3. Save and wait for deployment.
 
 
-## Customize
-- Change content in the HTML files.
-- Change accent color in `assets/style.css` at `--accent`.
-- Replace `assets/avatar.svg` with a custom avatar illustration if desired.
-- Music toggle is UI-only until an audio file and playback logic are added.
+## Story content
+The novel outline is a prototype roadmap. Full chapter prose is not included yet. The concept includes sensitive family trauma and should be handled non-graphically and with care. Adult romance/harem elements must only involve adult characters.
