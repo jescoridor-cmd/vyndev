@@ -21,7 +21,7 @@
       if(Number(page.page)!==index+1 || !Array.isArray(page.paragraphs) || page.paragraphs.length!==4) return false;
       return page.paragraphs.every(paragraph=>{
         if(typeof paragraph!=='string') return false;
-        const words=paragraph.trim().split(/\\s+/).filter(Boolean).length;
+        const words=paragraph.trim().split(/\s+/).filter(Boolean).length;
         return words>=minWords && words<=maxWords;
       });
     });
