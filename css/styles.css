@@ -1,0 +1,183 @@
+
+:root{--bg:#11121a;--panel:#1a1b25;--panel2:#222331;--line:#343447;--text:#eee9f2;--muted:#a7a1b4;--gold:#d7ad82;--gold2:#f0d3ad;--accent:#9b78d4;--reader:#f2e8d6;--readerText:#3c3028}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer;border:1px solid var(--line);background:var(--panel2);color:var(--text);padding:9px 13px;border-radius:10px;transition:.2s}button:hover{border-color:var(--gold);transform:translateY(-1px)}button.primary{background:linear-gradient(120deg,#c69c76,#e4c49e);color:#211a18;border:0;font-weight:700}button.ghost{background:transparent}.app{display:flex;min-height:100vh}.sidebar{width:220px;flex-shrink:0;background:#15151f;border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:8px}.brand{padding:8px 10px 24px;font-family:Georgia,serif;color:var(--gold2);font-size:23px}.brand small{display:block;font-size:11px;color:var(--muted);letter-spacing:2px;margin-top:4px}.nav{display:flex;align-items:center;gap:11px;text-align:left;width:100%;background:transparent;border-color:transparent;color:#c9c4d1}.nav.active{background:#292637;border-color:#383347;color:#fff}.sidebar .bottom{margin-top:auto}.main{flex:1;min-width:0;padding:28px clamp(14px,3vw,42px)}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.eyebrow{color:var(--gold);letter-spacing:1.8px;font-size:11px;text-transform:uppercase}.h1{font:clamp(25px,3vw,38px) Georgia,serif;margin:5px 0 8px}.muted{color:var(--muted)}.hero{border:1px solid #373347;border-radius:20px;padding:28px;background:linear-gradient(110deg,#242132,#171722);position:relative;overflow:hidden}.hero:after{content:'✦';position:absolute;right:8%;top:5%;font-size:140px;color:#77608e;opacity:.13}.hero p{max-width:520px;color:#c5bfce}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0}.stat,.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}.stat b{font:24px Georgia,serif;display:block;margin:6px 0;color:var(--gold2)}.stat small{color:var(--muted)}.section-title{display:flex;justify-content:space-between;align-items:center;margin:24px 0 12px}.section-title h2{font:22px Georgia,serif;margin:0}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:14px}.book{overflow:hidden;padding:0}.cover{height:160px;background:linear-gradient(140deg,#403450,#1a1c2b);display:flex;align-items:center;justify-content:center;font:25px Georgia,serif;text-align:center;padding:15px;color:#ead3b2;background-size:cover;background-position:center}.bookbody{padding:14px}.book h3{margin:0 0 5px;font:19px Georgia,serif}.book-actions{display:flex;gap:6px;margin-top:12px;flex-wrap:wrap}.book-actions button{font-size:12px;padding:7px 10px}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.field{width:100%;padding:11px;background:#12131b;border:1px solid var(--line);border-radius:10px;color:var(--text);outline:none}.field:focus{border-color:var(--gold)}label{display:block;color:var(--muted);font-size:12px;margin:12px 0 6px}.modalback{position:fixed;inset:0;background:#05050bbd;display:none;align-items:center;justify-content:center;padding:16px;z-index:20}.modalback.show{display:flex}.modal{width:min(620px,100%);max-height:90vh;overflow:auto;background:#1b1b25;border:1px solid var(--line);border-radius:18px;padding:22px}.modal h2{font:25px Georgia,serif;margin:0 0 16px}.modalfoot{display:flex;justify-content:flex-end;gap:8px;margin-top:18px}.editor{display:grid;grid-template-columns:210px minmax(0,1fr) 190px;gap:12px;height:calc(100vh - 155px);min-height:460px}.editorpanel{background:var(--panel);border:1px solid var(--line);border-radius:13px;overflow:auto;padding:12px}.chapteritem{padding:9px;border-radius:8px;cursor:pointer;color:#c6c0cf;margin-bottom:4px}.chapteritem.active{background:#302a3c;color:var(--gold2)}.editarea{width:100%;min-height:320px;resize:vertical;background:transparent;border:0;color:var(--text);outline:none;font:18px/1.8 Georgia,serif;padding:14px}.edithead{font:24px Georgia,serif;border:0;background:transparent;color:var(--text);outline:none;width:100%;padding:10px}.saveStatus{font-size:12px;color:#84c99a}.reader{position:fixed;inset:0;background:var(--reader);color:var(--readerText);z-index:30;display:none;flex-direction:column;background-size:cover;background-position:center}.reader.show{display:flex}.readerTop,.readerBottom{padding:13px 20px;display:flex;align-items:center;justify-content:space-between;gap:10px;background:#f2e8d6e8;color:#44372c}.readerTop button,.readerBottom button{color:#44372c;background:#e5d6c1;border-color:#c8b49b}.readerTop .pg{font-size:14px}.bookpage{flex:1;min-height:0;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:clamp(6px,2vw,22px);position:relative}.spread{width:min(1000px,100%);height:100%;max-height:100%;display:grid;grid-template-columns:1fr 1fr;background:#f7efdf;box-shadow:0 12px 45px #30251a28;border-radius:3px;overflow:hidden;position:relative}.spread:after{content:'';position:absolute;left:50%;top:0;bottom:0;width:22px;transform:translateX(-50%);background:linear-gradient(90deg,#e3d4bf,#f9f1e2,#e3d4bf);opacity:.75}.page{padding:clamp(14px,3vw,42px);overflow:auto;min-height:0;font:clamp(15px,1.45vw,20px)/1.85 Georgia,serif;white-space:pre-wrap;overflow-wrap:anywhere}.page h1{font:28px Georgia,serif;text-align:center;margin:12px 0 28px}.page p{margin:0 0 1em;text-indent:1.1em}.page p:first-of-type{text-indent:0}.readerControls{display:flex;gap:10px;align-items:center}.readerProgress{height:4px;background:#cbbba6;flex:1;border-radius:10px;overflow:hidden}.readerProgress div{height:100%;background:#aa8059;width:0}.readerNav{display:flex;gap:6px;align-items:center}.readerNav select{color:#44372c;background:#e5d6c1;border:1px solid #c8b49b;border-radius:8px;padding:7px;max-width:160px}.readerNav label{margin:0;color:#44372c;font-size:11px;white-space:nowrap}.toast{position:fixed;bottom:20px;right:20px;background:#292735;border:1px solid var(--line);padding:12px 16px;border-radius:12px;z-index:50;display:none}.toast.show{display:block}.hidden{display:none!important}.empty{border:1px dashed var(--line);padding:40px;text-align:center;border-radius:14px;color:var(--muted)}.search{max-width:300px}.settingsrow{display:flex;align-items:center;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--line)}@media(max-width:900px){.sidebar{width:70px;padding:14px 8px}.brand{font-size:0;padding:8px 4px 18px}.brand small{display:none}.nav{justify-content:center;font-size:0}.nav span{font-size:18px}.editor{grid-template-columns:150px 1fr;height:auto}.editor .rightpanel{display:none}.stats{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.reader{height:100dvh}.readerTop,.readerBottom{flex-shrink:0}.bookpage{padding:6px}.spread{height:100%;max-height:100%;width:100%;border-radius:0}.page{padding:18px 20px;font-size:clamp(15px,4.2vw,18px);line-height:1.7}.readerBottom{gap:6px}.readerProgress{min-width:30px}.readerBottom button{padding:8px 10px;font-size:13px}.main{padding:16px}.hero{padding:20px}.editor{grid-template-columns:1fr}.editor .chapterpanel{max-height:180px}.editarea{min-height:50vh}.spread{grid-template-columns:1fr;height:85vh}.spread .page:nth-child(2){display:none}.spread:after{display:none}.page{font-size:16px}.readerTop,.readerBottom{padding:10px}.readerTop .pg{font-size:12px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cover{height:130px}.book-actions button{flex:1}}
+
+/* Vyn Novel Space · Blue/Black refresh */
+:root{
+ --bg:#070b14;--panel:#111827;--panel2:#1b2639;--line:#2b3a52;
+ --text:#eaf2ff;--muted:#9aaac2;--gold:#5ca8ff;--gold2:#c7e2ff;
+ --accent:#3b82f6;--reader:#f2e8d6;--readerText:#3c3028;
+}
+body{background:radial-gradient(ellipse at 12% 0%,rgba(39,110,210,.18),transparent 38%),radial-gradient(ellipse at 95% 85%,rgba(12,48,110,.22),transparent 32%),var(--bg);letter-spacing:.01em}
+.sidebar{background:linear-gradient(180deg,#0d1422,#080d17);border-right:1px solid #223650;box-shadow:8px 0 30px #0003}
+.brand{font-size:25px;letter-spacing:.02em;color:#b9dcff;text-shadow:0 0 24px #3695ff30}
+.brand small{letter-spacing:2.5px}
+.nav{border-radius:12px;padding:11px 12px;transition:background .22s,border .22s,color .22s,transform .22s}
+.nav:hover{background:#1a2940;border-color:#2c4568;transform:translateX(2px)}
+.nav.active{background:linear-gradient(100deg,#172a45,#1a2232);border-color:#31527b;box-shadow:inset 3px 0 #4b9dff}
+.main{padding-top:32px}.top{margin-bottom:28px}.h1{letter-spacing:-.025em;line-height:1.15}
+.hero{background:linear-gradient(120deg,rgba(19,39,67,.97),rgba(12,17,29,.96)),radial-gradient(circle at 85% 20%,#3889e833,transparent 40%);border-color:#29415f;box-shadow:0 18px 50px #0003;padding:clamp(24px,4vw,42px);min-height:200px}
+.hero:after{content:'✦';right:7%;top:12%;font-size:clamp(100px,14vw,180px);color:#60aaff33;opacity:.35;transform:rotate(10deg)}
+.hero h2{max-width:600px;position:relative;z-index:1;color:#c7e2ff}.hero p,.hero button{position:relative;z-index:1}
+.stat,.card{box-shadow:0 8px 24px #0002;transition:transform .24s,border-color .24s,box-shadow .24s}.stat:hover,.card:hover{transform:translateY(-3px);border-color:#3b5d83;box-shadow:0 14px 32px #0004}
+.stat{background:linear-gradient(145deg,#141f31,#101724)}.stat b{color:#c7e2ff;text-shadow:0 0 20px #60aaff22}
+.section-title h2{letter-spacing:-.02em}.book{border-radius:16px}.cover{position:relative;background-image:radial-gradient(circle at 25% 20%,#3b82f655,transparent 45%),linear-gradient(145deg,#253956,#101827);font-size:27px;letter-spacing:.02em;color:#d7ebff}
+.cover:after{content:'VYN · NOVEL SPACE';position:absolute;bottom:12px;left:0;right:0;text-align:center;font:10px system-ui;letter-spacing:3px;color:#8fc5ff88}
+.bookbody{padding:16px}.book h3{line-height:1.25}.book-actions button{border-radius:9px}button{border-radius:11px}button.primary{background:linear-gradient(120deg,#2675d8,#54a8ff);color:#071321;border:0;font-weight:700;box-shadow:0 5px 18px #2675d824}button.primary:hover{filter:brightness(1.07)}button:hover{border-color:#4b9dff}
+.field{background:#0b1220;border-radius:12px}.field:focus{border-color:#4b9dff}.modal{box-shadow:0 25px 80px #0008}.editorpanel{border-radius:15px}.chapteritem{transition:background .2s}.chapteritem:hover{background:#1b2940}.editarea{line-height:1.9}.toast{box-shadow:0 14px 40px #0006;border-radius:14px}.empty{background:#111827aa}.settingsrow{border-color:#2b3a52}
+@media(max-width:900px){.sidebar{box-shadow:none}.nav.active{box-shadow:inset 3px 0 #4b9dff}.main{padding-top:20px}}
+@media(max-width:600px){.main{padding:14px}.top{align-items:flex-start}.hero{border-radius:17px}.stats{gap:9px}.stat{padding:13px}.book{border-radius:13px}.cover{font-size:20px}.bookbody{padding:11px}.book h3{font-size:16px}.book-actions{gap:5px}.book-actions button{padding:7px 6px;font-size:11px}}
+
+/* Vyn Novel Space · Smooth Reading UI refresh */
+:root{--ease-ui:cubic-bezier(.22,.8,.25,1)}
+html{scroll-behavior:smooth}
+body{letter-spacing:0;transition:background .45s var(--ease-ui),color .35s var(--ease-ui)}
+button,.card,.stat,.nav,.chapteritem,.cover,.field,.modal,.hero{transition:all .28s var(--ease-ui)}
+button{backdrop-filter:blur(8px);}
+button:active{transform:scale(.97)}
+.main{animation:softEnter .42s var(--ease-ui)}
+@keyframes softEnter{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.sidebar{position:sticky;top:0;height:100vh;backdrop-filter:blur(18px);z-index:5}
+.nav{min-height:44px;font-size:13px}
+.nav span{width:22px;display:inline-flex;justify-content:center;align-items:center;flex-shrink:0}
+.hero{border-radius:26px;isolation:isolate}
+.hero:before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 90% 0%,#58a8ff17,transparent 44%);pointer-events:none}
+.hero h2{letter-spacing:-.03em;line-height:1.18}
+.stat,.card{border-radius:18px}
+.book{display:flex;flex-direction:column;min-height:100%;}
+.cover{height:auto;aspect-ratio:3/4;max-height:320px;min-height:190px;display:flex;align-items:flex-end;justify-content:center;padding:22px 16px 42px;text-shadow:0 3px 18px #0008;}
+.cover:after{bottom:14px;letter-spacing:2.4px}
+.bookbody{display:flex;flex-direction:column;flex:1}
+.book-actions{margin-top:auto;padding-top:12px}
+.grid{align-items:stretch}
+.card:hover .cover{filter:saturate(1.12);transform:scale(1.015)}
+.section-title{gap:12px}
+.editorpanel{box-shadow:0 10px 30px #0002}
+.chapteritem{padding:11px 12px}
+.editarea{border-radius:14px;transition:background .25s}
+.modalback{backdrop-filter:blur(8px)}
+.modal{animation:modalIn .22s var(--ease-ui)}
+@keyframes modalIn{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}
+.toast{animation:toastIn .25s var(--ease-ui)}
+@keyframes toastIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+.readerTop,.readerBottom{box-shadow:0 2px 14px #4b352015}
+.page{scrollbar-width:thin;scrollbar-color:#c8b49b transparent}
+.readerProgress{transition:height .2s}
+@media(max-width:900px){
+ .sidebar{position:fixed;top:auto;bottom:0;left:0;width:100%;height:auto;padding:7px 8px calc(7px + env(safe-area-inset-bottom));display:flex;flex-direction:row;gap:4px;overflow-x:auto;border-right:0;border-top:1px solid #223650;backdrop-filter:blur(20px);background:#080e19ed}
+ .brand,.sidebar .bottom{display:none}
+ .nav{min-width:54px;flex:1;padding:9px 6px;display:flex;flex-direction:column;gap:3px;font-size:9px;line-height:1.1;white-space:nowrap;border-radius:10px;min-height:50px}
+ .nav span{font-size:17px;width:auto}
+ .nav.active{box-shadow:inset 0 2px #4b9dff}
+ .main{padding-bottom:calc(82px + env(safe-area-inset-bottom))}
+}
+@media(max-width:600px){
+ .hero{padding:22px;border-radius:22px}
+ .stats{margin:14px 0}
+ .grid{gap:10px}
+ .cover{aspect-ratio:2/3;min-height:145px;padding:14px 10px 34px;font-size:clamp(16px,4.5vw,22px)}
+ .bookbody{padding:12px}
+ .book-actions{display:grid;grid-template-columns:1fr 1fr}
+ .book-actions button{font-size:11px;min-height:36px}
+ .top{gap:10px;flex-wrap:wrap}
+ .top>.primary{margin-left:auto}
+ .readerTop,.readerBottom{backdrop-filter:blur(12px)}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Vyn Novel Space · Glow Polish v1.1.3 */
+:root{--glow-blue:#4da5ff;--glow-soft:#4da5ff24;--ease-ui:cubic-bezier(.2,.75,.25,1)}
+body{position:relative;isolation:isolate;overflow-x:hidden}
+body:before{content:'';position:fixed;inset:-20%;z-index:-1;pointer-events:none;background:radial-gradient(ellipse at 15% 18%,#258bff16,transparent 32%),radial-gradient(ellipse at 80% 65%,#4c7cff10,transparent 36%);animation:ambientDrift 18s ease-in-out infinite alternate}
+@keyframes ambientDrift{from{transform:translate3d(-1%,0,0) scale(1)}to{transform:translate3d(1%,1%,0) scale(1.04)}}
+.brand{text-shadow:0 0 12px #68b6ff24,0 0 28px #68b6ff12}
+.hero{box-shadow:0 18px 55px #0005,0 0 0 1px #4da5ff08,0 0 36px #398dff0c;transition:box-shadow .35s,border-color .35s,transform .35s}
+.hero:hover{border-color:#4da5ff60;box-shadow:0 20px 60px #0006,0 0 28px #4da5ff16}
+.hero:after{filter:drop-shadow(0 0 14px #62b4ff30)}
+.stat,.card{position:relative;overflow:hidden}
+.stat:before,.card:before{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,transparent 15%,#7bbaff0b 48%,transparent 80%);opacity:0;transition:opacity .35s}
+.stat:hover:before,.card:hover:before{opacity:1}
+.book:hover{box-shadow:0 14px 38px #0006,0 0 0 1px #4da5ff16}
+.cover{transition:filter .35s,transform .4s,background-position .5s;box-shadow:inset 0 -45px 55px #03071145}
+.book:hover .cover{filter:saturate(1.15) brightness(1.04);background-position:52% 48%}
+button{position:relative;overflow:hidden;transition:transform .22s var(--ease-ui),border-color .22s,box-shadow .22s,filter .22s}
+button:hover{box-shadow:0 0 18px #4da5ff15}
+button.primary{box-shadow:0 5px 18px #2675d824,0 0 0 1px #9bcfff18}
+button.primary:hover{box-shadow:0 7px 24px #398dff38,0 0 18px #4da5ff22;filter:brightness(1.08)}
+.nav.active{box-shadow:inset 3px 0 #4b9dff,0 0 20px #4b9dff0c}
+.field:focus{box-shadow:0 0 0 3px #4da5ff14,0 0 18px #4da5ff0c}
+.modal{box-shadow:0 24px 90px #0008,0 0 35px #4da5ff0b}
+.toast{box-shadow:0 14px 40px #0007,0 0 18px #4da5ff10}
+@media(prefers-reduced-motion:reduce){body:before{animation:none}}
+
+
+/* Vyn Novel Space · Fluid Motion Pack (CSS only; app logic untouched) */
+:root{--motion:cubic-bezier(.16,1,.3,1);--blueGlow:#65b4ff;--surfaceGlass:rgba(16,25,40,.72)}
+*{ -webkit-tap-highlight-color:transparent }
+body{background-attachment:fixed;min-height:100vh}
+.app{min-height:100dvh}
+.sidebar{transition:width .35s var(--motion),background .35s;}
+.brand{animation:brandReveal .7s var(--motion) both}
+.nav{position:relative;overflow:hidden;isolation:isolate}
+.nav:before{content:"";position:absolute;inset:0;background:linear-gradient(100deg,transparent,rgba(100,170,255,.12),transparent);transform:translateX(-120%);transition:transform .6s var(--motion);z-index:-1}
+.nav:hover:before{transform:translateX(120%)}
+.nav.active{transform:translateX(2px)}
+.main{animation:pageLift .5s var(--motion) both}
+.top .eyebrow{animation:fadeSlide .55s .05s var(--motion) both}
+.h1{animation:fadeSlide .55s .1s var(--motion) both}
+.hero{transform:translateZ(0);background-size:180% 180%;animation:heroIn .65s var(--motion) both,heroGradient 14s ease-in-out infinite alternate}
+.hero p{line-height:1.75}
+.stats{perspective:900px}
+.stat{transform:translateZ(0);transition:transform .35s var(--motion),box-shadow .35s,border-color .35s,background .35s}
+.stat:hover{transform:translateY(-5px) rotateX(2deg);box-shadow:0 18px 35px #0005,0 0 22px #4da5ff0d}
+.grid{gap:clamp(10px,1.5vw,18px)}
+.card,.book{transform:translateZ(0);transition:transform .35s var(--motion),box-shadow .35s,border-color .35s}
+.card:hover{transform:translateY(-4px)}
+.book:hover{transform:translateY(-5px) scale(1.008)}
+.cover{overflow:hidden;isolation:isolate}
+.cover:before{content:"";position:absolute;inset:-40%;background:linear-gradient(115deg,transparent 35%,#ffffff18 48%,transparent 58%);transform:translateX(-55%) rotate(12deg);transition:transform .8s var(--motion);z-index:0}
+.book:hover .cover:before{transform:translateX(55%) rotate(12deg)}
+.cover>*{position:relative;z-index:1}
+.book h3{transition:color .25s}
+.book:hover h3{color:var(--gold2)}
+button{overflow:hidden;isolation:isolate}
+button:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent,rgba(255,255,255,.13),transparent);transform:translateX(-130%);transition:transform .6s var(--motion);pointer-events:none}
+button:hover:after{transform:translateX(130%)}
+button:disabled{opacity:.42;cursor:not-allowed;transform:none!important;box-shadow:none!important}
+.field,select,.edithead,.editarea{transition:border-color .25s,box-shadow .25s,background .25s}
+.field:focus,.edithead:focus,.editarea:focus{box-shadow:0 0 0 3px #4da5ff18,0 0 24px #4da5ff0b}
+.modalback{animation:veilIn .2s ease both}
+.modal{transform-origin:center;animation:modalFloat .3s var(--motion) both}
+.chapteritem{position:relative;overflow:hidden;transition:background .25s,transform .25s,color .25s}
+.chapteritem:hover{transform:translateX(3px)}
+.chapteritem.active{box-shadow:inset 3px 0 #58aaff}
+.editorpanel{transition:border-color .25s,box-shadow .25s}
+.editorpanel:focus-within{border-color:#4da5ff45;box-shadow:0 12px 35px #0003,0 0 22px #4da5ff08}
+.editarea{caret-color:#68b6ff}
+.reader.show{animation:readerFade .3s ease both}
+.spread{animation:paperReveal .4s var(--motion) both}
+.page{scroll-behavior:smooth}
+.toast{backdrop-filter:blur(14px);border-color:#4da5ff38}
+.empty{transition:border-color .25s,background .25s}
+.empty:hover{border-color:#4da5ff55;background:#14203355}
+@keyframes brandReveal{from{opacity:0;transform:translateY(-7px)}to{opacity:1;transform:none}}
+@keyframes pageLift{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes fadeSlide{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+@keyframes heroIn{from{opacity:0;transform:translateY(10px) scale(.99)}to{opacity:1;transform:none}}
+@keyframes heroGradient{from{background-position:0% 50%}to{background-position:100% 50%}}
+@keyframes veilIn{from{opacity:0}to{opacity:1}}
+@keyframes modalFloat{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes readerFade{from{opacity:0}to{opacity:1}}
+@keyframes paperReveal{from{opacity:.7;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:900px){.sidebar{transition:none}.nav:hover{transform:none}.main{animation:none}.hero{animation:heroIn .5s var(--motion) both}.stat:hover,.card:hover,.book:hover{transform:none}}
+@media(max-width:600px){.hero:after{right:-3%;top:3%;font-size:100px}.cover:before{display:none}.book:hover{transform:none}.nav:before{display:none}.top .muted{line-height:1.5}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+
+/* Vyn Novel Space 2.0.0 */
+/* v2.0.0 cover rendering fix: display uploaded novel covers as real image elements */
+.cover.has-cover{padding:0;display:block;background:none!important;position:relative;overflow:hidden}
+.cover .book-cover-image{display:block;width:100%;height:100%;min-height:inherit;object-fit:cover;object-position:center;border-radius:inherit}
+.cover.has-cover:after{z-index:2;pointer-events:none}
+.cover.cover-failed{background:linear-gradient(140deg,#403450,#1a1c2b)!important;padding:15px;display:flex;align-items:center;justify-content:center}
+.vyn-upload-preview img{display:block;width:100%;height:100%;max-height:360px;object-fit:contain;border-radius:10px}
